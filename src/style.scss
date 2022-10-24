@@ -1,0 +1,241 @@
+$red:hsl(0, 78%, 62%);
+$cyan:hsl(180, 62%, 55%);
+$orange:hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%); 
+$grayishblue:hsl(229, 6%, 66%);
+$varyDarkBlue: hsl(234, 12%, 34%);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+body{
+    background-color:hsl(0, 0%, 98%);
+    scroll-behavior: smooth;
+   
+}
+
+
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    background-color: #00CBA9;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1.8rem 10rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    
+    .logo{
+        font-size: larger;
+        a{
+            color: black;
+        }
+    }
+    
+    .nav-link{
+        ul{
+            
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li{
+            font-size: large;
+            padding: 1rem 1.3rem;
+            font-weight: bolder;
+            .active{
+                color:hsl(0, 0%, 98%) ;
+            }
+           a{ color: black;}
+        }
+       }
+    }
+  }
+  .menu-link{
+    a{color: black;}
+  }
+
+
+
+// BlogCards `----------------------------------------------
+
+
+.box p {
+    color: $grayishblue;
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px $grayishblue;
+    padding: 30px;
+    margin: 20px;
+    height: 200px; 
+    
+    
+}
+#myblog{
+    padding: 5rem;
+    h1{text-align: center;}
+}
+
+
+
+
+
+
+.cyan {
+    border-top: 4px solid $cyan;
+}
+.red {
+    border-top: 4px solid $red;
+}
+.blue {
+    border-top: 4px solid $blue;
+}
+.orange {
+    border-top: 4px solid $orange;
+}
+
+h2 {
+    color: $varyDarkBlue;
+    font-weight: 400;
+}
+
+
+
+
+
+// form -----------------------------------------------
+$primary: #5968d7;
+
+#form {
+  display: flex;
+  justify-content: center;
+  font-family: 'Work Sans', sans-serif;
+  position: relative;
+  top: 50%;
+  transform: translateY(20%);
+}
+
+form {
+    background-color: #eeeff4;
+    width: 500px;
+    padding: 1rem 2rem 4rem 2rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    
+    
+    h1{
+        text-align: center;
+    }
+ 
+  label {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    font-weight: bold;
+  }
+  input{
+    height: 45px;
+  }
+  input, textarea {
+    border: none;
+    color: #333;
+    width: calc(100% - 30px);
+    outline: none;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;}
+  textarea{
+    height: 20vh;
+  }
+  input, textarea, button {
+    font-size: medium;
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+  }
+  div {
+    margin: 20px 0;
+  }
+}
+
+button {
+  height: 40px;
+  color: white;
+  border: none;
+  width:calc(100% - 30px) ;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgb(229, 141, 141);
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.25s all ease;
+  &:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+}
+
+
+.svg{
+  position: fixed;
+  bottom: 0;
+}
+
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    nav{
+        padding: 2rem 3rem;
+    }
+    .nav-link{
+        display: none;
+        
+    }
+    .nav-icon{
+        display:block;
+    }
+    form{
+        width: 450px;
+    }
+
+}
+@media (min-width: 950px) {
+    .blog-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box {
+        width: 80%;
+     
+    }
+    .nav-icon{
+        display: none;
+    }
+   
+    
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+        
+    }
+}
