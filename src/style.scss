@@ -235,7 +235,27 @@ button {
 
 @media (max-width: 450px) {
     .box {
-        height: 200px;
         
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 90%;
+    }
+    #myblog{
+        padding: 5rem 0 ;
+        
+    }
+    nav{
+        padding: 2rem 3rem;
+    }
+    .nav-link{
+        display: none;
+        
+    }
+    .nav-icon{
+        display:block;
+    }
+    form{
+        width: 450px;
     }
 }
